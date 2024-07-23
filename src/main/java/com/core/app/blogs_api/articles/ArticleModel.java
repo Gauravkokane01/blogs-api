@@ -1,7 +1,7 @@
 package com.core.app.blogs_api.articles;
 
 import com.core.app.blogs_api.common.BaseModel;
-import com.core.app.blogs_api.user.User;
+import com.core.app.blogs_api.user.UserModel;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,6 +39,6 @@ public class ArticleModel extends BaseModel {
 	private ArticleStatus status;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	private User user;
+	private UserModel userModel;
 
 }

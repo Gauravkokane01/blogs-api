@@ -12,12 +12,9 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
-import lombok.NonNull;
 
 @Entity(name = "users")
-
-public class User extends BaseModel {
+public class UserModel extends BaseModel {
 	//@NotNull
 	@Email(regexp = GenericConst.EMAIL_VALIDATION_PATTERN, message = "Invalid email id!!!")
 	@Column(name = "email", nullable = false, unique = true, length = 30)
@@ -41,7 +38,7 @@ public class User extends BaseModel {
 	@Column(name = "is_deleted", nullable = false)
 	private boolean isDeleted;
 
-	public User(
+	public UserModel(
 			@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}", message = "Invalid email id!!!") String email,
 			 String password, String name, String bio, Set<RoleModel> roles, boolean isDeleted) {
 		super();
@@ -53,7 +50,7 @@ public class User extends BaseModel {
 		this.isDeleted = isDeleted;
 	}
 
-	public User() {
+	public UserModel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -108,7 +105,7 @@ public class User extends BaseModel {
 
 	@Override
 	public String toString() {
-		return "User [email=" + email + ", password=" + password + ", name=" + name + ", bio=" + bio + ", roles="
+		return "UserModel [email=" + email + ", password=" + password + ", name=" + name + ", bio=" + bio + ", roles="
 				+ roles + ", isDeleted=" + isDeleted + "]";
 	}
 	
