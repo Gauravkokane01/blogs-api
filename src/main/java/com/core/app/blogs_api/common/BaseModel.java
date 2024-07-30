@@ -46,6 +46,7 @@ public class BaseModel {
 		super();
 		this.id = id;
 		this.createdAt = createdAt;
+		
 		this.updatedAt = updatedAt;
 	}
 
