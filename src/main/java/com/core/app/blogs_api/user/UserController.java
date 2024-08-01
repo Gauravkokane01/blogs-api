@@ -1,7 +1,5 @@
 package com.core.app.blogs_api.user;
 
-import java.util.List;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -59,6 +57,20 @@ public class UserController {
 
 	  
 	  }
+	  
+		/*
+		 * @PostMapping("/loginUser") public ResponseEntity<LoginUserResponseDTO>
+		 * loginUser(@RequestBody LoginUserRequestDTO requestDTO) { UserModel
+		 * user=modelMapper.map(requestDTO, UserModel.class); UserModel
+		 * loggedUser=userService.loginUser(user.getEmail(), user.getPassword());
+		 * LoginUserResponseDTO loginUserResponseDTO=modelMapper.map(loggedUser,
+		 * LoginUserResponseDTO.class); return
+		 * ResponseEntity.status(HttpStatus.OK).body(loginUserResponseDTO);
+		 * 
+		 * 
+		 * 
+		 * }
+		 */
 
 	  
 	  

@@ -39,4 +39,12 @@ public class UserService {
 		return user.get();
 	}
 
+	/*
+	 * public UserModel loginUser(String email, String password) {
+	 * Optional<UserModel>
+	 * user=userRepository.findByEmailandPassword(email,password);
+	 * if(!user.isPresent()) { return null; } return user.get(); }
+	 */
+
+
 }

@@ -1,9 +1,7 @@
 package com.core.app.blogs_api.common;
 
 import java.util.Date;
-import java.util.UUID;
 
-import org.hibernate.annotations.GeneratorType;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
